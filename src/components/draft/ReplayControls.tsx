@@ -43,7 +43,7 @@ interface IState {
 class ReplayControls extends React.Component<IProps, IState> {
 
     state = {
-        countdownValue: 60*5,
+        countdownValue: 60*10,
         currentOffset: 0,
         isRunning: false,
     } as IState;
@@ -139,7 +139,7 @@ class ReplayControls extends React.Component<IProps, IState> {
     private stopCountdown() {
         this.props.setCountdownValue({display: false, value: 0});
         this.clearInterval();
-        this.setState({countdownValue: 60*5});
+        this.setState({countdownValue: 60*10});
     }
 
     private scheduleDraftEvent(draftViews: DraftViews, event: PlayerEvent | AdminEvent) {
@@ -192,7 +192,7 @@ class ReplayControls extends React.Component<IProps, IState> {
     }
 
     private resetCountdownValue() {
-        this.setState({countdownValue: 60*5});
+        this.setState({countdownValue: 60*10});
     }
 
     private decrementCountdownValue() {

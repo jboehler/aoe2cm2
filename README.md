@@ -1,3 +1,22 @@
+# My notes
+
+## Develop Local
+
+```bash
+	npm run start
+	open http://localhost:3000
+```
+
+## Deploy Heroku
+
+```bash
+	heroku login
+	git push heroku master
+	heroku open
+```
+
+---
+
 # aoe2cm
 Captains Mode for Age of Empires II
 

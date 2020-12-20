@@ -30,7 +30,7 @@ class Index extends React.Component<WithTranslation, IState> {
                             prevent the opponent's captain from picking the civilizations.</Trans>
                     </p>
                     <p>
-                        <Trans i18nKey='instructions.home.2'>For each turn captains have <b>60*5 seconds</b>. In
+                        <Trans i18nKey='instructions.home.2'>For each turn captains have <b>60*10 seconds</b>. In
                             case of timeout a random civilization is picked for the captain or no civilization
                             gets banned.</Trans>
                     </p>

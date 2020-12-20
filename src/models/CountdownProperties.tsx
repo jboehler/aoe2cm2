@@ -8,7 +8,7 @@ export class CountdownProperties {
     }
 
     public resetValue() {
-        this.countdownValue = 60*5;
+        this.countdownValue = 60*10;
     }
 
     public decrement() {
