@@ -27,19 +27,39 @@ $pick-green: #4caf50;
 $ban-red: #cc3333;
 $host-cyan: #00bcd4;
 $guest-gold: #ffc107;
-$family-monospace: 'SF Mono', 'Consolas', 'Monaco', monospace;
+$family-monospace: "SF Mono", "Consolas", "Monaco", monospace;
 
 @import "../../node_modules/bulma/bulma.sass";
 
 // -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .navbar-brand h1 {
-  font-family: 'Crete Round', sans-serif;
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.navbar-brand h1 {
+  font-family: "Crete Round", sans-serif;
   font-weight: 300;
 }
 
-body, .box, .column, .tag, .table, td, .button, .bar, .navbar, .footer, .input, .message, a, code, .tabs ul {
+body,
+.box,
+.column,
+.tag,
+.table,
+td,
+.button,
+.bar,
+.navbar,
+.footer,
+.input,
+.message,
+a,
+code,
+.tabs ul {
   transition: all 0.4s ease;
 }
 
@@ -47,6 +67,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1024px;
+  min-height: 100vh;
 }
 
 section.section {
@@ -111,7 +132,6 @@ label.civ-select:hover {
   border-radius: $radius-small;
 }
 
-
 /* TURNS ROW */
 .turn-row {
 }
@@ -122,39 +142,58 @@ label.civ-select:hover {
 }
 
 .turn .tag {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
-.turn-row .arrow-start, .turn-row .arrow-end {
+.turn-row .arrow-start,
+.turn-row .arrow-end {
   font-size: 0.7rem;
   padding: 0.65rem;
 }
 
 .turn-host.turn-parallel .bar {
   background: $host-cyan; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($host-cyan, $guest-gold); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($host-cyan, $guest-gold); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($host-cyan, $guest-gold); /* For Firefox 3.6 to 15 */
+  background: -webkit-linear-gradient(
+    $host-cyan,
+    $guest-gold
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(
+    $host-cyan,
+    $guest-gold
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    $host-cyan,
+    $guest-gold
+  ); /* For Firefox 3.6 to 15 */
   background: repeating-linear-gradient(
-                  -55deg,
-                  $host-cyan,
-                  $host-cyan .4rem,
-                  $guest-gold .4rem,
-                  $guest-gold .8rem
+    -55deg,
+    $host-cyan,
+    $host-cyan 0.4rem,
+    $guest-gold 0.4rem,
+    $guest-gold 0.8rem
   );
 }
 
 .turn-guest.turn-parallel .bar {
   background: $guest-gold; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($guest-gold, $host-cyan); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($guest-gold, $host-cyan); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($guest-gold, $host-cyan); /* For Firefox 3.6 to 15 */
+  background: -webkit-linear-gradient(
+    $guest-gold,
+    $host-cyan
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(
+    $guest-gold,
+    $host-cyan
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    $guest-gold,
+    $host-cyan
+  ); /* For Firefox 3.6 to 15 */
   background: repeating-linear-gradient(
-                  -55deg,
-                  $guest-gold,
-                  $guest-gold .4rem,
-                  $host-cyan .4rem,
-                  $host-cyan .8rem
+    -55deg,
+    $guest-gold,
+    $guest-gold 0.4rem,
+    $host-cyan 0.4rem,
+    $host-cyan 0.8rem
   );
 }
 
@@ -177,8 +216,8 @@ label.civ-select:hover {
 }
 
 .bar {
-  height: .4rem;
-  border-radius: .2rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
 }
 
 .turn-host .bar {
@@ -195,17 +234,17 @@ label.civ-select:hover {
 
 .turn-parallel .bar {
   background: repeating-linear-gradient(
-                  -55deg,
-                  $host-cyan,
-                  $host-cyan .2rem,
-                  $guest-gold .2rem,
-                  $guest-gold .4rem
+    -55deg,
+    $host-cyan,
+    $host-cyan 0.2rem,
+    $guest-gold 0.2rem,
+    $guest-gold 0.4rem
   );
 }
 
 .turn-hidden .bar {
-  border-left: .5rem solid $black-ter;
-  border-right: .5rem solid $black-ter;
+  border-left: 0.5rem solid $black-ter;
+  border-right: 0.5rem solid $black-ter;
 }
 
 .turn.active {
@@ -222,7 +261,8 @@ label.civ-select:hover {
   border-radius: 2px;
   padding: 8px;
   background: rgba(153, 153, 153, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.12),
+    inset 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .choice {
@@ -249,7 +289,8 @@ label.civ-select:hover {
   background-color: rgba(244, 67, 54, 0.6);
 }
 
-.choice-banned, .choice-chosen {
+.choice-banned,
+.choice-chosen {
   opacity: 0.7;
 }
 
@@ -267,13 +308,15 @@ label.civ-select:hover {
 }
 
 .choice-disabled:hover {
-  opacity: 0.40;
+  opacity: 0.4;
   box-shadow: none;
   transform: none;
 }
 
-.choice-disabled, .choice-banned.choice-disabled:hover, .choice-chosen.choice-disabled:hover {
-  opacity: 0.30;
+.choice-disabled,
+.choice-banned.choice-disabled:hover,
+.choice-chosen.choice-disabled:hover {
+  opacity: 0.3;
   box-shadow: none;
   transform: none;
   cursor: not-allowed;
@@ -289,14 +332,16 @@ label.civ-select:hover {
   -webkit-filter: grayscale(100%);
 }
 
-.choice-hidden, .choice-hidden:hover {
+.choice-hidden,
+.choice-hidden:hover {
   opacity: 0.1;
   box-shadow: none;
   transform: none;
   background-color: transparent !important;
 }
 
-.choice, .choice img {
+.choice,
+.choice img {
   border-radius: 2px;
 }
 
@@ -340,7 +385,8 @@ div.stretchy-wrapper > div.stretchy-text {
   box-sizing: border-box;
 }
 
-.pick, .ban {
+.pick,
+.ban {
   box-shadow: none;
   border-radius: 4px;
   margin: 4px;
@@ -349,7 +395,8 @@ div.stretchy-wrapper > div.stretchy-text {
   opacity: 0.4;
 }
 
-.pick.has-value, .ban.has-value {
+.pick.has-value,
+.ban.has-value {
   opacity: 1;
 }
 
@@ -365,26 +412,29 @@ div.stretchy-wrapper > div.stretchy-text {
   background-color: $ban-red;
 }
 
-.pick img, .ban img {
+.pick img,
+.ban img {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.pick .chosen-hidden img, .ban .chosen-hidden img {
+.pick .chosen-hidden img,
+.ban .chosen-hidden img {
   visibility: hidden;
 }
 
 .pick .chosen-hidden .stretchy-image {
-  background-image: url('/images/hidden_pick.png');
+  background-image: url("/images/hidden_pick.png");
   background-size: contain;
 }
 
 .ban .chosen-hidden .stretchy-image {
-  background-image: url('/images/hidden_ban.png');
+  background-image: url("/images/hidden_ban.png");
   background-size: contain;
 }
 
-.picks .box-content, .bans .box-content {
+.picks .box-content,
+.bans .box-content {
   visibility: hidden;
 }
 
@@ -395,10 +445,10 @@ div.stretchy-wrapper > div.stretchy-text {
   height: 32px;
   top: 0;
   left: -2px;
-  background-image: url('/images/random.png');
+  background-image: url("/images/random.png");
   background-size: 32px 32px;
   background-repeat: no-repeat;
-  opacity: 1
+  opacity: 1;
 }
 
 .random-snipe {
@@ -408,7 +458,7 @@ div.stretchy-wrapper > div.stretchy-text {
   height: 32px;
   top: 32px;
   right: 32px;
-  background-image: url('/images/random.png');
+  background-image: url("/images/random.png");
   background-size: 32px 32px;
   background-repeat: no-repeat;
   opacity: 1;
@@ -455,7 +505,8 @@ div.stretchy-wrapper > div.stretchy-text {
   animation: pulsate 1s ease-in infinite alternate;
 }
 
-.role, .role img {
+.role,
+.role img {
   width: 100px;
   height: 100px;
   border-radius: 4px;
@@ -491,7 +542,9 @@ div.stretchy-wrapper > div.stretchy-text {
   background-color: rgba($scheme-main, 0.3);
 }
 
-.player-inactive h4.player-name, .player-inactive .captains-line, .player-inactive .sub-heading {
+.player-inactive h4.player-name,
+.player-inactive .captains-line,
+.player-inactive .sub-heading {
   opacity: 0.5;
 }
 
@@ -523,7 +576,9 @@ div.stretchy-wrapper > div.stretchy-text {
   text-transform: uppercase;
 }
 
-.picks, .bans, .captains-line {
+.picks,
+.bans,
+.captains-line {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -574,28 +629,27 @@ div.stretchy-wrapper > div.stretchy-text {
   width: 48px;
   height: 48px;
   color: $scheme-invert !important;
-  opacity: 0.60;
+  opacity: 0.6;
   background: none;
   padding: 0;
 }
 
 .back-icon.header-navigation:hover {
-  opacity: 1.0;
+  opacity: 1;
   background: none;
 }
 
 .snipe-marker {
-  background-image: url('/images/red-cross.svg');
+  background-image: url("/images/red-cross.svg");
 }
 
 .used-marker {
-  background-image: url('/images/green-checkmark.svg');
+  background-image: url("/images/green-checkmark.svg");
 }
 
 .green-status-marker {
   color: $pick-green;
 }
-
 
 @media screen and (max-width: 1215px) {
   .container.is-desktop {
@@ -620,7 +674,6 @@ div.stretchy-wrapper > div.stretchy-text {
     max-width: 960px;
   }
 }
-
 
 @-webkit-keyframes pulsate {
   from {
