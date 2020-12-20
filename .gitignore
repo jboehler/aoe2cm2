@@ -1,5 +1,5 @@
 /data
-/presets
+/presets/*
 !/presets/4v4exclusive.json
 # presets.json # for heroku i need have the preset.json in git
 alerts.json
