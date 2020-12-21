@@ -149,6 +149,24 @@ export class Validation {
         return true;
     });
 
+    public static readonly VLD_201_custom: Validation = new Validation(ValidationId.VLD_200, (draft: Draft, draftEvent: DraftEvent) => {
+        if (!draft.hasNextAction()) {
+            return true;
+        }
+        if (Util.isPlayerEvent(draftEvent)) {
+            const playerEvent = draftEvent as PlayerEvent;
+            if (playerEvent.actionType !== ActionType.BAN) {
+                return true;
+            }
+            const opponent: Player = playerEvent.player === Player.HOST ? Player.GUEST : Player.HOST;
+            const picksByOpponent: Civilisation[] = draft.getPicks(opponent);
+            if (Validation.includes(picksByOpponent, playerEvent.civilisation)) {
+                return false;
+            }
+        }
+        return true;
+    });
+
     public static readonly VLD_300: Validation = new Validation(ValidationId.VLD_300, (draft: Draft, draftEvent: DraftEvent) => {
         if (!draft.hasNextAction()) {
             return true;
@@ -216,6 +234,7 @@ export class Validation {
         Validation.VLD_103,
 
         Validation.VLD_200,
+        Validation.VLD_201_custom,
 
         Validation.VLD_300,
         Validation.VLD_301
