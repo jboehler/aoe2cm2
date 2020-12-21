@@ -45,10 +45,9 @@ class CivPanel extends React.Component<IProps, IState> {
         let textClass: string = 'stretchy-text';
         if (civilisation !== undefined) {
             civilisationName = civilisation.name;
-            imageSrc = "/images/civs/" + civilisationName.toLocaleLowerCase() + "-DE.png";
-            if (this.props.iconStyle === 'emblems') {
-                imageSrc = "/images/civemblems/" + civilisationName.toLocaleLowerCase() + ".png";
-            }
+            imageSrc += "/images";
+            imageSrc += this.props.iconStyle === 'emblems' ? "/civemblems" : "/civs"
+            imageSrc += "/" + civilisationName.toLocaleLowerCase() + ".png"
             civilisationKey = 'civs.' + civilisationName;
             if (Util.isTechnicalCivilisation(civilisation)) {
                 textClass += ' is-hidden';
