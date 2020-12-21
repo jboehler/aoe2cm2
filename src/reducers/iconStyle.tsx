@@ -3,7 +3,7 @@ import {IconStyleAction} from "../actions";
 import {Actions} from "../constants";
 
 export const initialIconStyleState: IIconStyleState = {
-    iconStyle: 'units',
+    iconStyle: 'emblems',
 };
 
 export const iconStyleReducer = (state: IIconStyleState = initialIconStyleState, action: IconStyleAction) => {
